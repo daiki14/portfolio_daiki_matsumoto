@@ -1,0 +1,614 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, button, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ==============================================================
+# 基本設定
+=========================================================== */
+/* ==============================================================
+# ブレークポイント
+=========================================================== */
+/* ==============================================================
+# メディアクエリ
+=========================================================== */
+body {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 100;
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.title::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+}
+
+.header {
+  margin-top: 100px;
+}
+
+.header__inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__left h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Train One", sans-serif;
+  letter-spacing: 5px;
+}
+
+.header__right {
+  margin-left: auto;
+  padding-top: 20px;
+}
+
+.header__right .fab {
+  padding: 0 5px;
+  opacity: 0.7;
+}
+
+.header__right .fa-instagram {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header__right .fa-instagram:hover {
+  color: #CF025D;
+}
+
+.header__right .fa-line {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header__right .fa-line:hover {
+  color: green;
+}
+
+.table {
+  display: none;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__list li {
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.header__list li:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header__list li a {
+  font-weight: bold;
+}
+
+.header__list li a:hover {
+  text-decoration: underline;
+}
+
+.top {
+  margin-top: 60px;
+}
+
+.top__wrap {
+  width: 100%;
+  max-width: 960px;
+  height: 460px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .top__wrap .is_pc {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .top__wrap .is_sp {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .top__wrap .is_sp {
+    display: none;
+  }
+}
+
+.border {
+  margin-top: 60px;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding: 10px 0;
+}
+
+.border:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: solid 2px #000;
+  -webkit-animation: border_anim 1s linear forwards;
+          animation: border_anim 1s linear forwards;
+}
+
+.border::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  width: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  border-bottom: solid 2px #000;
+  -webkit-animation: border_anim 1s linear forwards;
+          animation: border_anim 1s linear forwards;
+}
+
+@-webkit-keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.about__img {
+  padding: 50px 0 0 60px;
+}
+
+.about__img img {
+  width: 250px;
+}
+
+.about__text {
+  font-size: 16px;
+  margin-left: 80px;
+}
+
+.about__text .fab {
+  margin-right: 10px;
+}
+
+.about__text .text {
+  margin-top: 20px;
+}
+
+.about__button {
+  margin-top: 40px;
+}
+
+.about__button a {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  background: #fff;
+  color: #333;
+  border: solid 1px #333;
+  max-width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.about__button a:hover {
+  color: #fff;
+  background: #333;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.about__button .fas {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* ==============================================================
+# about2
+=========================================================== */
+.about2 {
+  margin-top: 100px;
+}
+
+.about2__inner {
+  text-align: center;
+}
+
+.about2__inner img {
+  width: 140px;
+}
+
+.about2__logo span {
+  font-size: 14px;
+  display: block;
+  margin-bottom: -20px;
+}
+
+.about2__text {
+  text-align: left;
+  margin-top: 60px;
+}
+
+.skill__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skill__content {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.skill__content h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.skill__content i {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.skill__content .sub {
+  opacity: 0.3;
+}
+
+.skill__text {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.9;
+  letter-spacing: 1.5px;
+}
+
+.works__sub {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+.works__contents {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.works__contents img {
+  border: solid 1px #ccc;
+  width: calc(1000px / 3);
+  margin: 2% 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 3px 6px 6px #6c6c6c;
+          box-shadow: 3px 6px 6px #6c6c6c;
+}
+
+.works__contents img:hover {
+  opacity: 0.7;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.contact__inner p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.contact__menu {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact__menu .fab {
+  padding: 0 20px;
+}
+
+.contact__menu .fa-instagram {
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.contact__menu .fa-instagram:hover {
+  color: #CF025D;
+}
+
+.contact__menu .fa-line {
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.contact__menu .fa-line:hover {
+  color: green;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 0 80px 20px;
+}
+
+.footer__list li {
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.footer__list li:not(:first-child) {
+  margin-left: 50px;
+}
+
+.footer__list li a {
+  font-weight: bold;
+}
+
+.footer__list li a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================================================
+# スマホ表示
+=========================================================== */
+@media (max-width: 767px) {
+  .section {
+    padding: 60px 0;
+  }
+  .inner {
+    width: 100%;
+  }
+  .header {
+    margin-top: 10px;
+  }
+  .header__left h1 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+  }
+  .header__right {
+    padding: 10px 10px 0 0;
+  }
+  .header__nav {
+    display: none;
+  }
+  .table {
+    display: block;
+    padding-top: 30px;
+  }
+  .table td {
+    border: solid 1px #d9d9d9;
+    text-align: center;
+    width: 50%;
+  }
+  .table a {
+    letter-spacing: 2px;
+    display: block;
+    padding: 10px 0;
+  }
+  .top__wrap {
+    height: 300px;
+  }
+  .border {
+    font-size: 14px;
+  }
+  .about {
+    padding: 30px 20px;
+  }
+  .about__content {
+    display: block;
+  }
+  .about__img {
+    display: none;
+  }
+  .about__text {
+    padding-left: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .skill__contents {
+    display: block;
+  }
+  .works__sub {
+    font-size: 12px;
+  }
+  .works__contents {
+    margin-top: 15px;
+  }
+  .works__contents img {
+    width: 300px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .contact__inner p {
+    font-size: 12px;
+  }
+  .footer__list {
+    display: block;
+    padding: 0 0 40px 20px;
+  }
+  .footer__list li {
+    margin-top: 0;
+  }
+  .footer__list li:not(:first-child) {
+    margin-left: 0;
+  }
+  .about2 {
+    margin-top: 40px;
+  }
+  .about2__text {
+    padding: 0 40px;
+  }
+}
+
+/* ==============================================================
+# タブレット表示
+=========================================================== */
+@media (min-width: 768px) and (max-width: 1000px) {
+  .header {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .table {
+    display: none;
+  }
+  .top__wrap {
+    height: 300px;
+  }
+  .about {
+    padding: 40px 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

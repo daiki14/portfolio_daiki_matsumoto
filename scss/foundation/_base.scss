@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.inner {
+  max-width: $layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-family: $font-en;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 100;
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    content: '';
+    background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+    background-size: 7px 7px;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

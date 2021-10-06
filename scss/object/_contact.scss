@@ -1,0 +1,35 @@
+.contact {
+
+}
+
+.contact__inner {
+
+  p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+}
+
+.contact__menu {
+  margin-top: 40px;
+  text-align: center;
+
+  .fab {
+    
+    padding: 0 20px;
+  }
+
+  .fa-instagram {
+    transition: .7s;
+    &:hover {
+      color: #CF025D;
+    }
+  }
+  .fa-line {
+    transition: .7s;
+    &:hover {
+      color: green;
+    }
+  }
+}

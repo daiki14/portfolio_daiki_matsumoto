@@ -1,0 +1,28 @@
+.footer {
+  
+}
+
+.footer__nav {
+
+}
+
+.footer__list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0 80px 20px;
+
+  li {
+    margin-top: 40px;
+    letter-spacing: 2px;
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+
+    a {
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
